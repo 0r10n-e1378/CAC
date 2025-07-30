@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://yfk35upmxn7d"]
+
+[ext_resource type="Texture2D" uid="uid://cc70cqp6obgmf" path="res://sprites/smartphone.png" id="1_04mx8"]
+[ext_resource type="Script" path="res://scripts/phone.gd" id="1_f6f21"]
+
+[node name="phone" type="Node2D"]
+script = ExtResource("1_f6f21")
+
+[node name="Smartphone" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_04mx8")
+
+[node name="Timer" type="Timer" parent="."]
