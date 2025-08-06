@@ -19,4 +19,5 @@ shape = SubResource("RectangleShape2D_h55g1")
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_ek1bb")
 
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
