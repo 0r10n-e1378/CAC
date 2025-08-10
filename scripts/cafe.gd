@@ -15,7 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if num_customers_current < 3 and !customer_arriving:
+	if num_customers_current < 1 and !customer_arriving:
 		setup_random_customer()
 	
 
