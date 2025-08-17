@@ -7,7 +7,14 @@ var max_customer_appearance_time = 15
 
 var num_customers_current = 0
 var customer_arriving = false
-var orders = ["Espresso", "Muffin", "Tea", "Sandwich"]
+var order_param = { #Each order param corresponds to one of the stations
+					"size":		["Small","Medium","Large"], 
+					"brew":		["Espresso", "Tea"], 
+					"mix":		["Milk", "Soy Milk", "Ice", "Syrup"], 
+					"topping":	["Whipped Cream", "Sprinkles"],
+					"plating":	["Sandwich", "Muffin"]
+					}
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,7 +51,7 @@ func _on_timer_timeout():
 	
 	# Create and add the order label above the customer
 	var order_label = Label.new()
-	order_label.text = orders[randi() % orders.size()]
+	#order_label.text = orders[randi() % orders.size()]
 	order_label.add_theme_font_size_override("font_size", 64)
 	order_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	order_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
